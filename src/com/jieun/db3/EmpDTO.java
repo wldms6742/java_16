@@ -1,5 +1,6 @@
 package com.jieun.db3;
 
+import java.sql.Date;
 import java.util.Calendar;
 
 public class EmpDTO {
@@ -7,10 +8,11 @@ public class EmpDTO {
 	private String ename;
 	private String job;
 	private int mgr;
-	private Calendar hiredate;
+	private Date hiredate;//date -> java.sql 
 	private int sal;
-	private int comm;
+	private Integer comm;//reference타입이기때문에 null들어갈수 잇다
 	private int deptno;
+	
 	public int getEmpno() {
 		return empno;
 	}
@@ -35,10 +37,10 @@ public class EmpDTO {
 	public void setMgr(int mgr) {
 		this.mgr = mgr;
 	}
-	public Calendar getHiredate() {
+	public Date getHiredate() {
 		return hiredate;
 	}
-	public void setHiredate(Calendar hiredate) {
+	public void setHiredate(Date hiredate) {
 		this.hiredate = hiredate;
 	}
 	public int getSal() {
@@ -47,10 +49,11 @@ public class EmpDTO {
 	public void setSal(int sal) {
 		this.sal = sal;
 	}
-	public int getComm() {
+
+	public Integer getComm() {
 		return comm;
 	}
-	public void setComm(int comm) {
+	public void setComm(Integer comm) {
 		this.comm = comm;
 	}
 	public int getDeptno() {

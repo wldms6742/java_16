@@ -10,20 +10,19 @@ import java.util.StringTokenizer;
 
 
 public class View {
-	public void view(SelectDTO dto) {
-		
-			System.out.println("=====================");
-			System.out.println("DEPTNO :"+dto.getDeptno());
-			System.out.println("DNAME  :"+dto.getDname());
-			System.out.println("LOC    :"+dto.getLoc());
-	
-	}
 	public void view(ArrayList<SelectDTO> ar) {
-		for(SelectDTO dto : ar) {
-			this.view(ar);
+		for(SelectDTO selectDTO: ar) {
+			this.view(selectDTO);
 		}
 	}
+	
+	public void view(SelectDTO deptDTO) {
+		System.out.println("DEPTNO : "+deptDTO.getDeptno());
+		System.out.println("DNAME  : "+deptDTO.getDname());
+		System.out.println("LOC    : "+deptDTO.getLoc());
+	}
+
+	}
 
 
 
-}
